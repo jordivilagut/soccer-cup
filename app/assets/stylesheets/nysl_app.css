@@ -1,0 +1,595 @@
+body{
+    background: rgb(12,84,13);
+    font-family: 'Open Sans Condensed';
+    height: 100vh;
+}
+
+strong{
+    font-weight: bold;
+    font-family: calibri;
+}
+
+.strong{
+    font-family: calibri;
+}
+
+.hidden{
+    display: none;
+}
+
+.whiteBg{
+    background: whitesmoke;
+}
+
+.roundBottom{
+    border-radius: 0 0 10px 10px;
+}
+
+.emptySpace{
+    height: 190px;
+}
+
+.boxShadow{
+    box-shadow: 2px 2px 20px black;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* INDEX CSS */
+
+.indexHeader{
+    background: whitesmoke;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.myLogo{
+    height: 420px;
+    margin: 20px;
+}
+
+
+.indexNav ul li{
+    background: transparent;
+    margin: 100px 100px 50px 100px;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px black;
+}
+
+.indexNav ul li p{
+    background: whitesmoke;
+    color: dimgray;
+    padding: 40px 0 40px 100px;
+    border-radius: 0 10px 10px 0;
+    width: 100%;
+}
+
+.indexNav ul li i{
+    background: dimgray;
+    color: whitesmoke;
+    text-align: center;
+    padding: 40px;
+    width: 200px;
+    text-decoration: none;
+    border-radius: 10px 0 0 10px;
+}
+
+/* NAVIGATION BAR CSS */
+
+#navBarContent{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: whitesmoke;
+    height: 180px;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 0px 5px 10px black;
+}
+
+#navBarContent a{
+    color: black;
+}
+
+#navBarContent i{
+    text-align: center;
+    padding: 40px;
+    width: 100px;
+}
+
+/*.navBarLogo{
+height: 450px;
+}*/
+
+/* GAME LIST CSS */
+
+.game{
+    margin: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.gamePin{
+    width: 50px;
+    background: dimgray;
+    text-align: center;
+    line-height: 320px;
+    font-size: 60px;
+    border-radius: 10px 0 0 10px;
+    color: whitesmoke;
+}
+
+.game .gameData{
+    width: 100%;
+}
+
+
+.gameRow{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 50px;
+}
+
+.topRow{
+    border-top-right-radius: 10px;
+    border-bottom: solid dimgray 1px;
+    height: 159px;
+}
+
+.bottomRow{
+    border-bottom-right-radius: 10px;
+}
+
+#gameList .teamEmblem{
+    width: 120px;
+    padding: 0 40px 0 40px;
+}
+
+.teamScore{
+    line-height: 160px;
+    width: 160px;
+    text-align: center;
+    font-size: 100px;
+    margin-left: auto;
+    background: dimgray;
+    color: whitesmoke;
+}
+
+/* GAME DETAIL CSS */
+
+.gameHeader{
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: dimgray;
+    color: whitesmoke;
+}
+
+.weather{
+    text-align: center;
+}
+
+.gameHeader h2{
+    font-size: 60px;
+    padding-top: 10px;
+}
+
+.gameHeader h3{
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+.gameHeader p{
+    font-size: 30px;
+}
+
+.gameHeader i{
+    font-size: 70px;
+}
+
+.gameTeams{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gameTeams .team{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gameTeams .away{
+    text-align: right;
+}
+
+.gameTeams .teamEmblem{
+    height: 120px;
+    padding: 20px;
+}
+
+.gameTeams h1{
+    font-size: 55px;
+    padding: 10px;
+}
+
+.gameTeams p{
+    font-size: 100px;
+    padding: 20px;
+}
+
+.gameRef{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+#playersLists{
+    padding: 30px 0px 80px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#playersLists table{
+    font-size: 40px;
+}
+
+#playersLists table td{
+    padding: 2px 10px 2px 10px;
+}
+
+#playersLists table .player{
+    max-width: 260px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.statusIcon{
+    height: 35px;
+}
+
+#gameLocation{
+    padding: 20px;
+}
+
+.locationInfo{
+    margin: 20px;
+}
+
+#gameLocation h2{
+    font-size: 50px;
+    margin: 10px;
+}
+
+#gameLocation p{
+    font-size: 40px;
+}
+
+#mapBtn, #chatBtn{
+    width: 100%;
+    line-height: 180px;
+    background: rgb(60,60,60);
+    color: whitesmoke;
+    border-radius: 30px;
+    font-weight: 10;
+    text-align: center;
+}
+
+#chatBtnFrame{
+    padding: 20px;
+}
+
+#chatBtn{
+    background: rgb(40, 57, 84);
+}
+
+#mapBtn i, #chatBtn i{
+    font-size: 80px;
+    margin: 20px;
+}
+
+#mapBtn p, #chatBtn p{
+    font-size: 80px;
+    font-family: Open Sans Condensed;
+}
+
+.mapFrame{
+    text-align: center;
+    padding: 20px;
+}
+
+.gameFooter{
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 40px;
+    background: dimgray;
+    color: whitesmoke;
+}
+
+/* TEAM PROFILE CSS */
+
+.profileHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: dimgray;
+    color: whitesmoke;
+}
+
+.profileHeader h1{
+    font-size: 80px;
+}
+
+.profileHeader img{
+    height: 180px;
+    margin: 20px 20px 20px 50px;
+}
+
+.profileHeader button{
+    font-family: 'Open Sans Condensed';
+    font-size: 45px;
+    width: 250px;
+    font-weight: bold;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background: rgb(255, 198, 43);
+    color: rgb(55,55,55);
+}
+
+.profileHeader button:focus{
+    outline: none;
+}
+
+.profileHeader button.unClicked{
+    background: rgba(255,255,255,0.1);
+    border: solid rgb(255, 198, 43) 5px;
+    color: rgb(255, 198, 43);
+}
+
+#teamPicture{
+    text-align: center;
+    padding: 30px 10px 0 10px;
+}
+
+#teamPicture img{
+    width: 90%;
+    border: solid whitesmoke 20px;
+    box-shadow: 0px 0px 20px dimgray;
+}
+
+#teamProfileData{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px 30px 40px;
+
+}
+
+#teamPlayers{
+    font-size: 40px;
+    margin-right: 20px;
+
+}
+
+#teamPlayers table{
+    table-layout: fixed;
+    width: 100%;
+    box-shadow: 2px 2px 20px black;
+    border: solid silver 1px;
+}
+
+#teamPlayers td{
+    text-align: left;
+}
+
+#teamPlayers td.short{
+    width: 40px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+#teamPlayers table tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+#teamGames{
+    font-size: 30px;
+}
+
+#teamGames table{
+    box-shadow: 2px 2px 20px black;
+    border: solid silver 1px;
+}
+
+#teamGames table tr:nth-child(odd) {
+
+}
+
+#teamGames td{
+    text-align: center;
+    white-space:nowrap;
+    overflow-y: hidden;
+    line-height: 40px;
+    padding: 10px;
+}
+
+/* CSS LOGIN */
+
+#loginBtnFrame{
+    margin: 100px;
+}
+
+#loginBtn{
+    box-shadow: 2px 2px 20px black;
+    border-radius: 10px;
+    border: none;
+    background: dimgray;
+    color: whitesmoke;
+    padding: 40px 0px 40px 20px;
+    font-size: 80px;
+    width: 100%;
+}
+
+.avatar{
+    height: 150px;
+    border-radius: 50%;
+    margin: 15px 20px 0 0;
+}
+
+/* MY PROFILE CSS */
+
+.myProfile{
+    background: whitesmoke;
+    text-align: center;
+}
+
+.myProfile img{
+    height: 300px;
+    border-radius: 50%;
+    margin: 40px;
+}
+
+.myProfile h1{
+    font-size: 100px;
+    margin: 40px;
+}
+
+/* CSS CHATROOM */
+
+.messageBoard{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatRoomInfo{
+    position: fixed;
+    top: 190px;
+    right: 0;
+    left: 0;
+}
+
+.sendBox{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.message{
+    box-shadow: 2px 2px 20px black;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 50px;
+    padding: 30px;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+.userName{
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.orange{
+    color: orange;
+}
+
+.green{
+    color: green;
+}
+
+.own{
+    text-align: right;
+    background: rgb(213, 224, 242);
+    align-self: flex-end;
+}
+
+/* TEAM SEARCH CSS */
+
+.inputBox{
+    background: dimgray;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.inputBoxMargin{
+    margin: 100px 100px 50px 100px;
+}
+
+.inputBox input{
+    font-family: 'Open Sans Condensed';
+    background: whitesmoke;
+    color: dimgray;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    width: 100%;
+    padding: 40px 0px 40px 20px;
+    font-size: 80px;
+    padding-left: 20px;
+}
+
+.inputBox i{
+    color: whitesmoke;
+    text-align: center;
+    width: 200px;
+    padding: 40px;
+    font-size: 80px;
+    border-radius: 0 10px 10px 0;
+}
+
+#teamList{
+    margin: 100px 100px 50px 100px;
+}
+
+#teamList table{
+    width: 100%;
+}
+
+#teamList table tr{
+    height: 200px;
+    border-bottom: solid silver 1px;
+
+}
+
+#teamList table td{
+    vertical-align: middle;
+    padding: 20px 0 20px 30px;
+    font-size: 60px;
+}
+
+#teamList table img{
+    height: 160px;
+
+}
+
+/* NEW CSS */
+
+#mainTitle {
+    padding-top: 20px;
+    font-size: 140px;
+    color: rgb(12,84,13);
+    font-family: "soccer";
+}
+
+@font-face {
+    font-family: 'soccer';
+    src: url('../fonts/SoccerLeagueCollege.ttf');
+}

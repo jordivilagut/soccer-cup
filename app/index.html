@@ -1,0 +1,409 @@
+<html lang="en" ng-app="nyslApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" href="assets/images/nysl_launch_icon.png">
+  <link rel="apple-touch-startup-image" href="assets/images/startup_nysl.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="user-scalable=no">
+  <title>NSYL Web App</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+  <link rel="stylesheet" href="assets/stylesheets/reset_css.css">
+  <link rel="stylesheet" href="assets/stylesheets/nysl_app.css">
+  <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_GB.-Dp7GbUo7cs.O/m=gapi_iframes/rt=j/sv=1/d=1/ed=1/am=wQE/rs=AGLTcCO91qW6sTy6mMb8guMwdvyX9ynLWQ/cb=gapi.loaded_0" async=""></script><script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+  <!--script src="assets/js/firebase_var.js"></script-->
+  <script type="text/javascript" charset="UTF-8" src="https://apis.google.com/js/api.js?onload=__iframefcb13500" gapi_processed="true"></script></head>
+
+<body ng-controller="nyslController" class="ng-scope">
+
+<div id="index">
+  <header class="indexHeader">
+    <h1 id="mainTitle">Covid Cup 2020</h1>
+  </header>
+
+  <nav class="indexNav">
+    <ul>
+      <li id="gamesBtn" ng-click="goForth('#index','#games');showNavBar()"><i class="fa fa-futbol-o"></i><p>Games</p></li>
+      <li id="teamSearchBtn" ng-click="goForth('#index','#teamSearch');showNavBar()"><i class="fa fa-child"></i><p>Teams</p></li>
+      <li id="myProfileBtn" ng-click="checkLogIn();showNavBar()"><i class="fa fa-user"></i><p>My Profile</p></li>
+      <li id="contactsBtn" ng-click="goForth('#index','#contacts');showNavBar()"><i class="fa fa-envelope-o"></i><p>Contacts</p></li>
+    </ul>
+  </nav>
+</div>
+
+<div id="navBar" class="hidden">
+  <div id="navBarContent">
+    <i id="backBtn" class="fa fa-angle-left" ng-click="goBack()"></i>
+    <!--img class='navBarLogo' src='assets/images/nysl_logo4.png' alt='NYSL Logo'-->
+    <div id="myUserIcon"><i id="menuBtn" class="fa fa-user"></i></div>
+  </div>
+  <div class="emptySpace"></div>
+</div>
+
+<div id="games" class="hidden">
+  <div id="gameList">
+    <!-- ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/team2_logo.png" src="assets/images/teams/team2_logo.png">
+          <p class="ng-binding">Greenbay Lions</p>
+          <div class="teamScore topRow ng-binding">5</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/yeager_logo.png" src="assets/images/teams/yeager_logo.png">
+          <p class="ng-binding">F.C. Yeager</p>
+          <div class="teamScore bottomRow ng-binding">0</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/polar_bear_logo.png" src="assets/images/teams/polar_bear_logo.png">
+          <p class="ng-binding">North Polar Bears</p>
+          <div class="teamScore topRow ng-binding">1</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/cats_logo.png" src="assets/images/teams/cats_logo.png">
+          <p class="ng-binding">Katzenmaier Tiger-Cats</p>
+          <div class="teamScore bottomRow ng-binding">1</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/rhinos_logo.png" src="assets/images/teams/rhinos_logo.png">
+          <p class="ng-binding">Marjorie Black Rhinos</p>
+          <div class="teamScore topRow ng-binding">3</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/segull_logo.png" src="assets/images/teams/segull_logo.png">
+          <p class="ng-binding">South Seagulls F.C.</p>
+          <div class="teamScore bottomRow ng-binding">2</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/segull_logo.png" src="assets/images/teams/segull_logo.png">
+          <p class="ng-binding">South Seagulls F.C.</p>
+          <div class="teamScore topRow ng-binding">0</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/team2_logo.png" src="assets/images/teams/team2_logo.png">
+          <p class="ng-binding">Greenbay Lions</p>
+          <div class="teamScore bottomRow ng-binding">1</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/cats_logo.png" src="assets/images/teams/cats_logo.png">
+          <p class="ng-binding">Katzenmaier Tiger-Cats</p>
+          <div class="teamScore topRow ng-binding">-</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/yeager_logo.png" src="assets/images/teams/yeager_logo.png">
+          <p class="ng-binding">F.C. Yeager</p>
+          <div class="teamScore bottomRow ng-binding">-</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/polar_bear_logo.png" src="assets/images/teams/polar_bear_logo.png">
+          <p class="ng-binding">North Polar Bears</p>
+          <div class="teamScore topRow ng-binding">-</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/rhinos_logo.png" src="assets/images/teams/rhinos_logo.png">
+          <p class="ng-binding">Marjorie Black Rhinos</p>
+          <div class="teamScore bottomRow ng-binding">-</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/team2_logo.png" src="assets/images/teams/team2_logo.png">
+          <p class="ng-binding">Greenbay Lions</p>
+          <div class="teamScore topRow ng-binding">-</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/polar_bear_logo.png" src="assets/images/teams/polar_bear_logo.png">
+          <p class="ng-binding">North Polar Bears</p>
+          <div class="teamScore bottomRow ng-binding">-</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/cats_logo.png" src="assets/images/teams/cats_logo.png">
+          <p class="ng-binding">Katzenmaier Tiger-Cats</p>
+          <div class="teamScore topRow ng-binding">-</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/segull_logo.png" src="assets/images/teams/segull_logo.png">
+          <p class="ng-binding">South Seagulls F.C.</p>
+          <div class="teamScore bottomRow ng-binding">-</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games --><div ng-repeat="game in games" ng-click="goForth('#games','#gameDetail'); changeGame(game.gameID)" class="ng-scope">
+    <div class="game boxShadow">
+      <div class="gamePin">|</div>
+      <div class="gameData">
+        <div class="gameRow whiteBg topRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/yeager_logo.png" src="assets/images/teams/yeager_logo.png">
+          <p class="ng-binding">F.C. Yeager</p>
+          <div class="teamScore topRow ng-binding">-</div>
+        </div>
+        <div class="gameRow whiteBg bottomRow">
+          <img class="teamEmblem" ng-src="assets/images/teams/rhinos_logo.png" src="assets/images/teams/rhinos_logo.png">
+          <p class="ng-binding">Marjorie Black Rhinos</p>
+          <div class="teamScore bottomRow ng-binding">-</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end ngRepeat: game in games -->
+  </div>
+</div>
+
+<div id="gameDetail" class="hidden boxShadow">
+
+  <div class="gameHeader">
+    <div>
+      <h3 class="ng-binding">1/9/2016<strong class="ng-binding"> 9:30</strong></h3>
+      <h2 class="ng-binding">Greenbay</h2>
+    </div>
+    <div class="weather">
+      <i class="wi wi-day-cloudy"></i>
+      <p>Scattered Clouds</p>
+    </div>
+
+  </div>
+
+  <div class="gameData whiteBg">
+    <div class="gameTeams">
+      <div class="team">
+        <img class="teamEmblem" ng-src="assets/images/teams/team2_logo.png" src="assets/images/teams/team2_logo.png">
+        <h1 class="ng-binding">Greenbay Lions</h1>
+        <p class="ng-binding">5</p>
+      </div>
+      -
+      <div class="team away">
+        <p class="ng-binding">0</p>
+        <h1 class="ng-binding">F.C. Yeager</h1>
+        <img class="teamEmblem" ng-src="assets/images/teams/yeager_logo.png" src="assets/images/teams/yeager_logo.png">
+      </div>
+    </div>
+    <div class="gameRef">
+      <p class="ng-binding"><strong>Ref: </strong>Manuel Gutiérrez</p>
+    </div>
+  </div>
+
+  <div id="playersLists" class="whiteBg">
+    <table id="homePlayersList">
+      <tbody><!-- ngRepeat: player in homePlayers -->
+      </tbody></table>
+    <table id="awayPlayersList">
+      <tbody><!-- ngRepeat: player in awayPlayers -->
+
+      </tbody></table>
+  </div>
+
+  <div id="gameLocation" class="whiteBg">
+    <button id="mapBtn" ng-click="showHideLocation()">
+      <p>Game Location <i class="fa fa-street-view"></i></p>
+    </button>
+
+    <div id="locationInfo" class="locationInfo hidden">
+      <h2 class="ng-binding">Greenbay</h2>
+      <p class="ng-binding">Werner-Heisenberg Allee 25</p>
+      <p class="ng-binding">80939, München</p>
+      <div class="mapFrame">
+        <iframe src="https://www.google.com/maps/d/embed?mid=15FOSfS6n4hwlihJ9oxMUf_ry5nc&amp;z=15" width="100%" height="480"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="chatBtnFrame" class="whiteBg">
+    <button id="chatBtn" ng-click="goForth('#gameDetail', '#loginPage')">
+      <p>Game Chatroom <i class="fa fa-comment-o"></i></p>
+    </button>
+  </div>
+
+  <div class="gameFooter">
+    <p>@Northside Youth Soccer League</p>
+  </div>
+</div>
+
+<div id="loginPage" class="hidden">
+  <div class="inputBox inputBoxMargin boxShadow">
+    <input type="text" placeholder="Username" ng-model="username" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <i class="fa fa-user"></i>
+  </div>
+  <div class="inputBox inputBoxMargin boxShadow">
+    <input type="password" placeholder="Password" ng-model="password" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <i class="fa fa-key"></i>
+  </div>
+
+  <div id="loginBtnFrame">
+    <button id="loginBtn" ng-click="loginProcess()">
+      <p>Login</p>
+    </button>
+  </div>
+</div>
+
+<div id="chatRoom" class="hidden">
+
+  <div class="chatRoomInfo boxShadow roundBottom">
+    <div class="gameHeader">
+      <div>
+        <h3 class="ng-binding">1/9/2016<strong class="ng-binding"> 9:30</strong></h3>
+        <h2 class="ng-binding">Greenbay</h2>
+      </div>
+      <div class="weather">
+        <i class="wi wi-day-cloudy"></i>
+        <p>Scattered Clouds</p>
+      </div>
+    </div>
+    <div class="gameData whiteBg roundBottom">
+      <div class="gameTeams">
+        <div class="team">
+          <img class="teamEmblem" ng-src="assets/images/teams/team2_logo.png" src="assets/images/teams/team2_logo.png">
+          <h1 class="ng-binding">Greenbay Lions</h1>
+          <p class="ng-binding">5</p>
+        </div>
+        -
+        <div class="team away">
+          <p class="ng-binding">0</p>
+          <h1 class="ng-binding">F.C. Yeager</h1>
+          <img class="teamEmblem" ng-src="assets/images/teams/yeager_logo.png" src="assets/images/teams/yeager_logo.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="inputBox sendBox boxShadow">
+    <input id="sendBox" type="text" ng-model="message" ng-keyup="uploadMessageOnEnter($event)" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <i ng-click="uploadMessage()" class="fa fa-paper-plane"></i>
+  </div>
+
+  <div class="emptySpace"></div>
+  <div class="emptySpace"></div>
+  <div id="messageBoardGroup"><div id="messageBoard0" class="messageBoard"><div class="message whiteBg sender"><p class="userName strong">Lionel</p><p class="userMessage">Hola</p></div><div class="message whiteBg sender"><p class="userName strong">Cristiano</p><p class="userMessage">Suuuh</p></div><div class="message whiteBg sender"><p class="userName strong">Lionel</p><p class="userMessage">😅</p></div><div class="message whiteBg sender"><p class="userName strong">Jordi</p><p class="userMessage">Hugugug</p></div><div class="message whiteBg sender"><p class="userName strong">Cristiano</p><p class="userMessage"><img class="myLogo" src="assets/images/cristiano_suh.jpg" alt="NYSL Logo"></p></div><div class="message whiteBg sender"><p class="userName strong">Lionel</p><p class="userMessage"><img class="myLogo" src="assets/images/messi5.jpg" alt="NYSL Logo"></p></div></div><div id="messageBoard1" class="messageBoard"></div><div id="messageBoard2" class="messageBoard"></div><div id="messageBoard3" class="messageBoard"></div><div id="messageBoard4" class="messageBoard"></div><div id="messageBoard5" class="messageBoard"></div><div id="messageBoard6" class="messageBoard"></div><div id="messageBoard7" class="messageBoard"></div><div id="messageBoard8" class="messageBoard"></div></div>
+  <div class="emptySpace"></div>
+</div>
+
+<div id="teamSearch" class="hidden">
+  <div class="inputBox inputBoxMargin boxShadow">
+    <input type="text" placeholder="Search Team" ng-model="searchText" ng-keyup="filterTeams()" class="ng-pristine ng-untouched ng-valid ng-empty">
+    <i class="fa fa-search"></i>
+  </div>
+
+  <div id="teamList" class="boxShadow whiteBg">
+    <table id="teamListTable">
+      <tbody><!-- ngRepeat: team in filteredTeams --><tr ng-repeat="team in filteredTeams" ng-click="goForth('#teamSearch','#teamProfile');changeTeam(team.id)" class="ng-scope">
+        <td><img class="teamEmblem" ng-src="assets/images/teams/team2_logo.png" src="assets/images/teams/team2_logo.png"></td>
+        <td class="ng-binding">Greenbay Lions</td>
+      </tr><!-- end ngRepeat: team in filteredTeams --><tr ng-repeat="team in filteredTeams" ng-click="goForth('#teamSearch','#teamProfile');changeTeam(team.id)" class="ng-scope">
+        <td><img class="teamEmblem" ng-src="assets/images/teams/cats_logo.png" src="assets/images/teams/cats_logo.png"></td>
+        <td class="ng-binding">Katzenmaier Tiger-Cats</td>
+      </tr><!-- end ngRepeat: team in filteredTeams --><tr ng-repeat="team in filteredTeams" ng-click="goForth('#teamSearch','#teamProfile');changeTeam(team.id)" class="ng-scope">
+        <td><img class="teamEmblem" ng-src="assets/images/teams/polar_bear_logo.png" src="assets/images/teams/polar_bear_logo.png"></td>
+        <td class="ng-binding">North Polar Bears</td>
+      </tr><!-- end ngRepeat: team in filteredTeams --><tr ng-repeat="team in filteredTeams" ng-click="goForth('#teamSearch','#teamProfile');changeTeam(team.id)" class="ng-scope">
+        <td><img class="teamEmblem" ng-src="assets/images/teams/yeager_logo.png" src="assets/images/teams/yeager_logo.png"></td>
+        <td class="ng-binding">F.C. Yeager</td>
+      </tr><!-- end ngRepeat: team in filteredTeams --><tr ng-repeat="team in filteredTeams" ng-click="goForth('#teamSearch','#teamProfile');changeTeam(team.id)" class="ng-scope">
+        <td><img class="teamEmblem" ng-src="assets/images/teams/rhinos_logo.png" src="assets/images/teams/rhinos_logo.png"></td>
+        <td class="ng-binding">Marjorie Black Rhinos</td>
+      </tr><!-- end ngRepeat: team in filteredTeams --><tr ng-repeat="team in filteredTeams" ng-click="goForth('#teamSearch','#teamProfile');changeTeam(team.id)" class="ng-scope">
+        <td><img class="teamEmblem" ng-src="assets/images/teams/segull_logo.png" src="assets/images/teams/segull_logo.png"></td>
+        <td class="ng-binding">South Seagulls F.C.</td>
+      </tr><!-- end ngRepeat: team in filteredTeams -->
+      </tbody></table>
+  </div>
+
+</div>
+
+<div id="teamProfile" class="hidden whiteBg boxShadow">
+  <div>
+    <div class="profileHeader">
+      <img class="teamEmblem">
+      <h1 class="ng-binding"></h1>
+      <button id="followBtn" class="unClicked" ng-click="toggleMyTeamBtn()">
+        <p>My Team</p>
+        <i id="followIcon" class="fa fa-check hidden"></i>
+      </button>
+    </div>
+
+    <div id="teamPicture">
+      <img ng-alt="">
+    </div>
+
+    <div id="teamProfileData">
+      <div id="teamPlayers" class="whiteBg">
+        <table>
+          <tbody><!-- ngRepeat: player in teamPlayers -->
+          </tbody></table>
+      </div>
+      <div id="teamGames">
+        <table>
+          <tbody><!-- ngRepeat: game in teamGames -->
+          </tbody></table>
+      </div>
+    </div>
+
+  </div>
+  <div class="gameFooter">
+    <p>@Northside Youth Soccer League</p>
+  </div>
+</div>
+
+<div id="myProfile" class="hidden whiteBg boxShadow">
+  <div class="profileHeader emptySpace"></div>
+  <div class="myProfile">
+    <img>
+    <h1 class="ng-binding"></h1>
+  </div>
+  <div class="gameFooter">
+    <p>@Northside Youth Soccer League</p>
+  </div>
+</div>
+
+<div class="emptySpace"></div>
+
+<div id="myScripts">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="assets/js/angular.js"></script>
+  <script src="assets/js/my_teams.js"></script>
+  <script src="assets/js/my_games.js"></script>
+  <script src="assets/js/my_users.js"></script>
+  <script src="assets/js/main.js"></script>
+</div>
+
+
+<iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" tabindex="0" vspace="0" width="100%" id="I0_1584470929229" name="I0_1584470929229" src="https://nysl-web-app-7537b.firebaseapp.com/__/auth/iframe?apiKey=AIzaSyDd-qucJHgprwPBu0QSh_d4L_2p5pnsevw&amp;appName=%5BDEFAULT%5D&amp;v=3.6.1&amp;usegapi=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_GB.-Dp7GbUo7cs.O%2Fam%3DwQE%2Fd%3D1%2Fct%3Dzgms%2Frs%3DAGLTcCO91qW6sTy6mMb8guMwdvyX9ynLWQ%2Fm%3D__features__#id=I0_1584470929229&amp;_gfid=I0_1584470929229&amp;parent=https%3A%2F%2Fnysl-web-app-7537b.web.app&amp;pfname=&amp;rpctoken=25485756" style="position: absolute; top: -100px; width: 1px; height: 1px;"></iframe></body></html>
