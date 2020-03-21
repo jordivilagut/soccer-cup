@@ -1,0 +1,54 @@
+/* Standings Menu */
+
+#standingsMenu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#standingsMenu .menuItem {
+    background: whitesmoke;
+    color: whitesmoke;
+    display: flex;
+    height: 60px;
+    margin-top: 32px;
+    justify-content: space-between;
+}
+
+#standingsMenu .menuItem .itemTitle {
+    color: dimgray;
+    align-self: center;
+}
+
+#standingsMenu .menuItem .itemIconFrame {
+    background: dimgray;
+    width: 60px;
+    font-size: 24px;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    vertical-align: center;
+    display: flex;
+
+}
+
+#standingsMenu .menuItem .itemIcon {
+    width: 40px;
+    padding: 10px;
+    align-self: center;
+    font-size: 24px;
+}
+
+#standingsMenu .menuItem .standingsPoints {
+    width: 40px;
+    padding: 10px;
+    align-self: center;
+    font-size: 24px;
+}
+
+#standingsMenu .menuItem p {
+    font-family: 'Open Sans Condensed';
+    font-size: 24px;
+    color: dimgray;
+    padding-left: 20px;
+}
