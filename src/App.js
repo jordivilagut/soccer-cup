@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Route, Switch} from 'react-router-dom'
+import {MainMenu} from "./pages/MainMenu";
+import {Games} from "./pages/Games";
+import {Standings} from "./pages/Standings";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+export const App = () => (
+    <div>
+      <header>
+        <h1>Covid Cup 2020</h1>
       </header>
+      <main>
+        <Switch>
+          <Route exact path="/" component={MainMenu}/>
+          <Route exact path="/games" component={Games}/>
+          <Route exact path="/standings" component={Standings}/>
+        </Switch>
+      </main>
     </div>
-  );
-}
-
-export default App;
+);
