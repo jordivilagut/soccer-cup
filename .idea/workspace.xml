@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5762cf8b-c408-4fc8-99df-7ff1cfcd62e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeague-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeague.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeagueCollege-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeagueCollege.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MenuItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/MenuItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MenuItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/MenuItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MainMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/styles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fonts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,15 +44,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/styles" />
-      <recent name="$PROJECT_DIR$/src/tests" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/fonts" />
       <recent name="$PROJECT_DIR$/src/styles" />
       <recent name="$PROJECT_DIR$/src/helpers" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src/tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -91,7 +96,8 @@
       <workItem from="1584805430243" duration="961000" />
       <workItem from="1584806912122" duration="1741000" />
       <workItem from="1584808762591" duration="633000" />
-      <workItem from="1584813050957" duration="1411000" />
+      <workItem from="1584813050957" duration="1732000" />
+      <workItem from="1584814911829" duration="203000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - app skeleton.">
       <created>1584807807095</created>
@@ -100,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584807807096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Style menu items">
+      <created>1584814597909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584814597909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit - app skeleton." />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit - app skeleton." />
+    <MESSAGE value="Style menu items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style menu items" />
   </component>
 </project>

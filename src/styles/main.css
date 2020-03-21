@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+@font-face {
+  font-family: 'soccer';
+  src: url('../fonts/SoccerLeagueCollege.ttf');
+}
+
+body {
+  margin: 0;
+  background: rgb(12,84,13);
+  font-family: 'Open Sans Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-family: soccer;
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 40px;
+}
+
+.boxShadow{
+  box-shadow: 2px 2px 20px black;
+  margin: 20px;
+  border-radius: 10px;
+}

@@ -1,6 +1,6 @@
 import {MenuItem} from "../components/MenuItem";
 import {faChartLine, faChild, faFutbol, faUser} from "@fortawesome/free-solid-svg-icons";
-import '../styles/MenuItem.css';
+import '../styles/MainMenu.css';
 import React from "react";
 
 export const MainMenu = () => (
