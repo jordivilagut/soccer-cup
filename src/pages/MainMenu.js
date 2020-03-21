@@ -6,10 +6,10 @@ import React from "react";
 export const MainMenu = () => (
     <nav id="mainMenu">
         <ul>
-            <MenuItem id="games" title="Games" icon={faFutbol}/>
-            <MenuItem id="teams" title="Teams" icon={faChild}/>
-            <MenuItem id="standings" title="Standings" icon={faChartLine}/>
-            <MenuItem id="profile" title="My Profile" icon={faUser}/>
+            <MenuItem id="games" href="/games" title="Games" icon={faFutbol}/>
+            <MenuItem id="teams" href="/teams" title="Teams" icon={faChild}/>
+            <MenuItem id="standings" href="/standings" title="Standings" icon={faChartLine}/>
+            <MenuItem id="profile" href="#" title="My Profile" icon={faUser}/>
         </ul>
     </nav>
 );
