@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5762cf8b-c408-4fc8-99df-7ff1cfcd62e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeague-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeague.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeagueCollege-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fonts/SoccerLeagueCollege.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/_redirects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/MenuItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MainMenu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Games.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Games.js" afterDir="false" />
+    </list>
+    <list id="5a70f556-e453-44cb-bee1-c396b987b6ad" name="gitignore" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -42,6 +43,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -89,6 +91,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5762cf8b-c408-4fc8-99df-7ff1cfcd62e1" name="Default Changelist" comment="" />
+      <changelist id="5a70f556-e453-44cb-bee1-c396b987b6ad" name="gitignore" comment="" />
       <created>1584805428915</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -97,7 +100,13 @@
       <workItem from="1584806912122" duration="1741000" />
       <workItem from="1584808762591" duration="633000" />
       <workItem from="1584813050957" duration="1732000" />
-      <workItem from="1584814911829" duration="203000" />
+      <workItem from="1584814911829" duration="1450000" />
+      <workItem from="1584816764449" duration="1640000" />
+      <workItem from="1584818665955" duration="338000" />
+      <workItem from="1584820717362" duration="1383000" />
+      <workItem from="1584882666656" duration="1257000" />
+      <workItem from="1584884523814" duration="1746000" />
+      <workItem from="1584886381183" duration="1266000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - app skeleton.">
       <created>1584807807095</created>
@@ -113,7 +122,42 @@
       <option name="project" value="LOCAL" />
       <updated>1584814597909</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Style menu title">
+      <created>1584815211792</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584815211792</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add teams menu">
+      <created>1584820874905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584820874905</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add standings">
+      <created>1584821817815</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584821817815</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Align standing items">
+      <created>1584884299060</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584884299060</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add and style games">
+      <created>1584885769376</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584885769376</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +179,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit - app skeleton." />
     <MESSAGE value="Style menu items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Style menu items" />
+    <MESSAGE value="Style menu title" />
+    <MESSAGE value="Add teams menu" />
+    <MESSAGE value="Add standings" />
+    <MESSAGE value="Align standing items" />
+    <MESSAGE value="Add and style games" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add and style games" />
   </component>
 </project>

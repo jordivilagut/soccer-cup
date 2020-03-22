@@ -7,6 +7,10 @@ import {BrowserRouter} from "react-router-dom";
 import {history} from "./helpers/history";
 import {App} from "./App";
 
+const meta = {
+    title: 'Some Meta Title'
+};
+
 ReactDOM.render(
     <BrowserRouter history={history}>
         <App/>
