@@ -1,0 +1,117 @@
+/* Games Menu */
+
+#gamesMenu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#gamesMenu .matchItem {
+    background: dimgray;
+    color: whitesmoke;
+    display: flex;
+    height: 120px;
+    flex-direction: column;
+}
+
+#gamesMenu .matchItem .matchTeamItem {
+    background: whitesmoke;
+    display: flex;
+    height: 60px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+#gamesMenu .matchItem .matchTeamItem .itemTitle {
+    color: dimgray;
+    align-self: center;
+}
+
+#gamesMenu .matchItem .matchTeamItem .data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+#gamesMenu .matchItem .matchTeamItem .itemIconFrame {
+    background: dimgray;
+    width: 60px;
+    font-size: 24px;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    vertical-align: center;
+    display: flex;
+}
+
+#gamesMenu .matchItem .matchTeamItem .scoreFrame {
+    background: dimgray;
+    width: 60px;
+    font-size: 24px;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    vertical-align: center;
+    align-items: center;
+    display: flex;
+}
+
+#gamesMenu .matchItem .matchTeamItem .scoreFrame p {
+    color: white;
+    font-size: 32px;
+}
+
+#gamesMenu .matchItem .matchTeamItem .itemIcon {
+    width: 40px;
+    padding: 10px;
+    align-self: center;
+    font-size: 24px;
+}
+
+#gamesMenu .matchItem .matchTeamItem p {
+    font-family: 'Open Sans Condensed';
+    font-size: 24px;
+    color: dimgray;
+    padding-left: 20px;
+}
+
+/* Back to Main Menu */
+
+#gamesMenu .menuItem {
+    background: whitesmoke;
+    color: whitesmoke;
+    display: flex;
+    height: 60px;
+    margin-top: 32px;
+    align-items: center;
+}
+
+#gamesMenu .menuItem .itemTitle {
+    color: dimgray;
+    align-self: center;
+}
+
+#gamesMenu .menuItem .itemIconFrame {
+    background: dimgray;
+    width: 60px;
+    font-size: 24px;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    vertical-align: center;
+    display: flex;
+
+}
+
+#gamesMenu .menuItem .itemIcon {
+    width: 40px;
+    padding: 10px;
+    align-self: center;
+    font-size: 24px;
+}
+
+#gamesMenu .menuItem p {
+    font-family: 'Open Sans Condensed';
+    font-size: 24px;
+    color: dimgray;
+    padding-left: 20px;
+}
