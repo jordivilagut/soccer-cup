@@ -5,11 +5,13 @@ export const StandingsItem = props => (
         <div className="itemIconFrame">
             <img src={require("../assets/badges/" + props.icon)} className="itemIcon"/>
         </div>
-        <div className="itemTitle">
-            <p>{props.name}</p>
-        </div>
-        <div className="standingsPoints">
-            <p>{props.points}</p>
+        <div className="data">
+            <div className="itemTitle">
+                <p>{props.name}</p>
+            </div>
+            <div className="standingsPoints">
+                <p>{props.points}</p>
+            </div>
         </div>
     </li>
 );

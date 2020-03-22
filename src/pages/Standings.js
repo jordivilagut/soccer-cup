@@ -7,11 +7,11 @@ import '../styles/Standings.css';
 export const Standings = () => (
     <div id="standingsMenu">
         <ul>
-            <StandingsItem points="12" name="F.C. Barcelona" icon="fcb.png"/>
-            <StandingsItem points="10" name="Manchester City" icon="city.png"/>
-            <StandingsItem points="9" name="Liverpool F.C." icon="lvp.png"/>
-            <StandingsItem points="8" name="Real Madrid C.F." icon="rmd.png"/>
-            <StandingsItem points="5" name="Paris Saint Germain" icon="psg.png"/>
+            <StandingsItem points="0pts" name="Barcelona" icon="fcb.png"/>
+            <StandingsItem points="0pts" name="Man. City" icon="city.png"/>
+            <StandingsItem points="0pts" name="Liverpool" icon="lvp.png"/>
+            <StandingsItem points="0pts" name="Real Madrid" icon="rmd.png"/>
+            <StandingsItem points="0pts" name="Paris SG" icon="psg.png"/>
             <MenuItem id="games" href="/" title="Main Menu" icon={faFutbol}/>
         </ul>
     </div>

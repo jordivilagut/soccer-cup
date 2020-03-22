@@ -12,7 +12,7 @@ export const Teams = props => (
             <Team name="Liverpool F.C." icon="lvp.png"/>
             <Team name="Real Madrid C.F." icon="rmd.png"/>
             <Team name="Paris Saint Germain" icon="psg.png"/>
-            <MenuItem id="games" href="/" title="Main Menu" icon={faFutbol}/>
+            <MenuItem href="/" title="Main Menu" icon={faFutbol}/>
         </ul>
     </div>
 );

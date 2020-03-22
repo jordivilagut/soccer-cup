@@ -1,23 +1,17 @@
 import React from "react";
+import {Team} from "../components/Team";
+import {MenuItem} from "../components/MenuItem";
+import {faFutbol} from "@fortawesome/free-solid-svg-icons";
 
-export const Games = props => (
-    <div id="gameList">
-        <div className="ng-scope">
-            <div className="game boxShadow">
-                <div className="gamePin">|</div>
-                <div className="gameData">
-                    <div className="gameRow whiteBg topRow">
-                        <img className="teamEmblem"/>
-                        <p className="ng-binding">Greenbay Lions</p>
-                        <div className="teamScore topRow ng-binding">5</div>
-                        <div className="gameRow whiteBg bottomRow">
-                            <img className="teamEmblem"/>
-                            <p className="ng-binding">F.C. Yeager</p>
-                            <div className="teamScore bottomRow ng-binding">0</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+export const Games = () => (
+    <div id="teamsMenu">
+        <ul>
+            <Team name="F.C. Barcelona" icon="fcb.png"/>
+            <Team name="Manchester City" icon="city.png"/>
+            <Team name="Liverpool F.C." icon="lvp.png"/>
+            <Team name="Real Madrid C.F." icon="rmd.png"/>
+            <Team name="Paris Saint Germain" icon="psg.png"/>
+            <MenuItem href="/" title="Main Menu" icon={faFutbol}/>
+        </ul>
     </div>
 );
