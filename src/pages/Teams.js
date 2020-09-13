@@ -7,11 +7,12 @@ import {MenuItem} from "../components/MenuItem";
 export const Teams = props => (
     <div id="teamsMenu">
         <ul>
-            <Team name="F.C. Barcelona" icon="fcb.png"/>
-            <Team name="Manchester City" icon="city.png"/>
-            <Team name="Liverpool F.C." icon="lvp.png"/>
-            <Team name="Real Madrid C.F." icon="rmd.png"/>
-            <Team name="Paris Saint Germain" icon="psg.png"/>
+            <Team name="Jue" icon="fcb.png"/>
+            <Team name="Santi" icon="city.png"/>
+            <Team name="Friky" icon="lvp.png"/>
+            <Team name="Jordi" icon="rmd.png"/>
+            <Team name="Tunet" icon="psg.png"/>
+            <Team name="Montes" icon="juv.png"/>
             <MenuItem href="/" title="Main Menu" icon={faFutbol}/>
         </ul>
     </div>
